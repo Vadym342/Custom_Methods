@@ -5,10 +5,14 @@
   "repository": "https://github.com/Vadym342/Custom_Methods.git",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^27.4.1",
     "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc -p tsconfig.build.json"
   }
 }
