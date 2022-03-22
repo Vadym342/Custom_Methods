@@ -1,0 +1,14 @@
+{
+  "name": "custom_methods",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Vadym342/Custom_Methods.git",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "typescript": "^4.6.2"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
