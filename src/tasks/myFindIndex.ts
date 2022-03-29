@@ -4,5 +4,3 @@ export function myFindIndex<T>(arr: T[], fn: (el: T) => Boolean): number {
     }
     return -1;
 };
-
-console.log(myFindIndex([4, 6, 8, 12], (x) => x > 8));
