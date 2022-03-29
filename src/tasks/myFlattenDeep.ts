@@ -21,7 +21,6 @@ export function myFlattenDeep<T>(input: flattenDeep<T>, arr: T[] = []): T[] {
         return arr;
     }, []);
 };
-console.log(myFlattenDeep([1, [2, 3], [4], [5, [6,]], [[[7]]], [[[8, 9]]]]));
 
 //! variant 2
 function flatten<T>(arr: T[][]): T[] {
@@ -29,7 +28,7 @@ function flatten<T>(arr: T[][]): T[] {
     return tmpArr.concat(...arr);
 }
 
-function MyFlattenDeep<T>(input: flattenDeep<T>): T[] {
+export function MyFlattenDeep<T>(input: flattenDeep<T>): T[] {
     return flatten(input.map((x) => {
         if (Array.isArray(x)) {
             return MyFlattenDeep(x)
@@ -38,4 +37,3 @@ function MyFlattenDeep<T>(input: flattenDeep<T>): T[] {
         };
     }));
 };
-console.log(MyFlattenDeep([1, 2, 3, [4, [5, [6, [7]]]]]));
