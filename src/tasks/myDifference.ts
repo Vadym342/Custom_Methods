@@ -22,16 +22,14 @@ function myIncludes<T>(el: T, arr: T[]): Boolean {
 export function myDifference<T>(arr1: T[], arr2: T[]): T[] {
     return myFilter((x: any) => !myIncludes(x, arr2), arr1);
 }
-console.log(myDifference([1, 2, 3, 4], [1, 2]));
 
 //! variant 2
-export function difference<T>(a1: T[], a2: T[]) {
+export function difference<T>(arr1: T[], arr2: T[]) {
     const result: T[] = [];
-    for (let i = 0; i < a1.length; i++) {
-        if (!myIncludes(a1[i], a2)) {
-            result.push(a1[i]);
+    for (let i = 0; i < arr1.length; i++) {
+        if (!myIncludes(arr1[i], arr2)) {
+            result.push(arr1[i]);
         }
     }
     return result;
 }
-console.log(difference([1, 2, 3, 4], [1, 2]));
